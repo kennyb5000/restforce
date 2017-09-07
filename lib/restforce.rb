@@ -29,6 +29,13 @@ module Restforce
     autoload :API,            'restforce/concerns/api'
   end
 
+  module Composite
+    autoload :Client,   'restforce/composite/client'
+    autoload :Api,      'restforce/composite/api'
+    autoload :Request,  'restforce/composite/request'
+    autoload :Verbs,    'restforce/composite/verbs'
+  end
+
   module Data
     autoload :Client, 'restforce/data/client'
   end

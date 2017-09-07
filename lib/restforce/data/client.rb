@@ -20,6 +20,14 @@ module Restforce
 
         "#{instance_url}/#{resource_name_for_url}"
       end
+
+      def composite
+        @composite ||= Restforce::Composite::Client.new(self, 'compositeRequest')
+      end
+
+      def batch
+        @batch ||= Restforce::Composite::Client.new(self, 'batchRequests')
+      end
     end
   end
 end
