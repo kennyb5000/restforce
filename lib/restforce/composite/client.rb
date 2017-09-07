@@ -1,6 +1,8 @@
 module Restforce
   module Composite
     class Client
+      include Restforce::Composite::Api
+      include Restforce::Composite::Request
       attr_reader :requests, :base_client, :key
 
       def initialize(base_client, key)
